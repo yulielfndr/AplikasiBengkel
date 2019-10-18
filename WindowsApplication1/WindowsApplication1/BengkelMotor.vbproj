@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15EFEEC2-4DB1-48C5-BB60-27DB9FAC8556}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>WindowsApplication1</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WindowsApplication1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WindowsApplication1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ClsCtlAkun.vb" />
+    <Compile Include="Controller\ClsCtlJasa.vb" />
+    <Compile Include="Controller\ClsCtlKaryawan.vb" />
+    <Compile Include="Controller\ClsCtlKasKeluar.vb" />
+    <Compile Include="Controller\ClsCtlProduk.vb" />
+    <Compile Include="Controller\InfProses.vb" />
+    <Compile Include="Entity\ClsEntAkun.vb" />
+    <Compile Include="Entity\ClsEntJasa.vb" />
+    <Compile Include="Entity\ClsEntKaryawan.vb" />
+    <Compile Include="Entity\ClsEntKasKeluar.vb" />
+    <Compile Include="Entity\ClsEntLogin.vb" />
+    <Compile Include="Entity\ClsEntProduk.vb" />
+    <Compile Include="Entity\ClsEntTransaksi.vb" />
+    <Compile Include="Form\CRKaryawan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRKaryawan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form\CRNota.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRNota.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form\CRProduk.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRProduk.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form\FormCariJasa.Designer.vb">
+      <DependentUpon>FormCariJasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormCariJasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormCariProduk.Designer.vb">
+      <DependentUpon>FormCariProduk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormCariProduk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormKasKeluar.Designer.vb">
+      <DependentUpon>FormKasKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormKasKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormKasMasuk.Designer.vb">
+      <DependentUpon>FormKasMasuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormKasMasuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormKategoriLaporan.Designer.vb">
+      <DependentUpon>FormKategoriLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormKategoriLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLaporanKaryawan.Designer.vb">
+      <DependentUpon>FormLaporanKaryawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormLaporanKaryawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLaporanProduk.Designer.vb">
+      <DependentUpon>FormLaporanProduk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormLaporanProduk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormOlahDataRekAkun.Designer.vb">
+      <DependentUpon>FormOlahDataRekAkun.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormOlahDataRekAkun.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormTransaksi.designer.vb">
+      <DependentUpon>FormTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormTransaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMenu.Designer.vb">
+      <DependentUpon>FormMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormProduk.Designer.vb">
+      <DependentUpon>FormProduk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormProduk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormJasa.Designer.vb">
+      <DependentUpon>FormJasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormJasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormKaryawan.Designer.vb">
+      <DependentUpon>FormKaryawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormKaryawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul\ModKoneksiDB.vb" />
+    <Compile Include="Modul\ModObjekdanFungsi.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\CRKaryawan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRKaryawan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CRNota.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRNota.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CRProduk.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRProduk.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCariJasa.resx">
+      <DependentUpon>FormCariJasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCariProduk.resx">
+      <DependentUpon>FormCariProduk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormKasKeluar.resx">
+      <DependentUpon>FormKasKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormKasMasuk.resx">
+      <DependentUpon>FormKasMasuk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormKategoriLaporan.resx">
+      <DependentUpon>FormKategoriLaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormLaporanKaryawan.resx">
+      <DependentUpon>FormLaporanKaryawan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormLaporanProduk.resx">
+      <DependentUpon>FormLaporanProduk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormOlahDataRekAkun.resx">
+      <DependentUpon>FormOlahDataRekAkun.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormTransaksi.resx">
+      <DependentUpon>FormTransaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMenu.resx">
+      <DependentUpon>FormMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormProduk.resx">
+      <DependentUpon>FormProduk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormJasa.resx">
+      <DependentUpon>FormJasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormKaryawan.resx">
+      <DependentUpon>FormKaryawan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jasa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keluar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laporan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\montir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaksi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\input-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test-input.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\input-data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-simpan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-edit-tambah-hapus-batal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-col-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-half.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-quarter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-col-md-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-col-md-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header-transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\input-col-md-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-transaksi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
